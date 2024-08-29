@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main() {
+    int num1, num2, resultado;
+    char op;
+
+    std::cout << "Digite o primeiro número: " << std::endl;
+    std::cin >> num1;
+
+    std::cout << "Digite uma das operações [+, -, /, *]" << std::endl;
+    std::cin >> op;
+
+    std::cout << "Digite o segundo número: " << std::endl;
+    std::cin >> num2;
+
+    if (!(op == '+' || op == '-' || op == '/' || op == '*')) {
+        std::cerr << "Operação inválida!" << std::endl;
+        return 1;
+    }
+
+    if (op == '+')
+        resultado = num1 + num2;
+    else if (op == '-')
+        resultado = num1 - num2;
+    else if (op == '/')
+        resultado = num1 / num2;
+    else if (op == '*')
+        resultado = num1 * num2;
+
+    std::cout << num1 << op << num2 << "=" << resultado << std::endl;
+
+    return 0;
+}
